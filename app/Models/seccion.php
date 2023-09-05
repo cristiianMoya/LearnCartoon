@@ -17,8 +17,6 @@ class seccion extends Model
     public function temas(){
         return $this->hasMany('App\Models\tema');
     }
-    public function actividads(){
-        return $this->hasMany('App\Models\actividad');
-    }
+    
     }
     
