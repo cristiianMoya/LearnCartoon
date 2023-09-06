@@ -16,11 +16,11 @@ return new class extends Migration
             $table->string('nombre_tema');
             $table->unsignedBigInteger('seccion_id')->unique();
             //cramos la relacion a nivel de migraciones
-            $table->foreign('seccion_id')
-            ->references('id')
-            ->on('seccions')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
+            $table->foreign('seccion_id') ->references('id') ->on('seccions')->onDelete('cascade')->onUpdate('cascade');
+           
+           
+            
+            
         });
     }
 

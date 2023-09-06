@@ -17,16 +17,16 @@
             </tr>
         </thead>
         <tbody>
-          @foreach ($cursos  as $curso)
+          @foreach ($logins  as $login)
               <tr>
-                  <td>{{$curso->id}}</td>
-                  <td>{{$curso->name}}</td>
-                  <td>{{$curso->descripcion}}</td>
-                  <td>{{$curso->urlPdf}}</td>
+                  <td>{{$login->id}}</td>
+                  <td>{{$login->name}}</td>
+                  <td>{{$login->descripcion}}</td>
+                  <td>{{$login->urlPdf}}</td>
                   
-                  <td><a href="{{route('curso.show',$curso->id)}}">Detalle</a></td>
+                  <td><a href="{{route('login.show',$login->id)}}">Detalle</a></td>
                  <td>
-                    <form method="post" action="{{route('curso.destroy',$curso->id)}}">
+                    <form method="post" action="{{route('login.destroy',$login->id)}}">
                         @method('delete')
                         @csrf
                         <button type="submit" class="btn btn-danger btn-sm">Delete</button>
@@ -55,52 +55,3 @@
     </table>
     
     </div>
-    
-
-
-
-
-
-
-
-
-
-
-
-@endsection
-
-@section('js')
-
-
-<script type="text/javascript">
-
-   $(document).ready(function() {
-    // $('#idPqrsd').DataTable();
-  
-    // Enable DataTables: https://datatables.net/examples/basic_init/
-    try {
-      if ($.fn.dataTable.isDataTable("#idPqrsd")) {
-        $("#idPqrsd").DataTable()
-      } else {
-        $("#idPqrsd").DataTable({
-          language: {
-            url:
-              "https://cdn.datatables.net/plug-ins/1.10.22/i18n/Spanish.json",
-          },
-        })
-      }
-    } catch (error) {
-      console.log(
-        "Unable to add Filters to a table from this page - " + error.name
-      )
-    }
-
-
-} );
-</script>
-
-@endsection
-
-
-
-

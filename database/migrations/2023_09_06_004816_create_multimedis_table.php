@@ -11,18 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('dibujos', function (Blueprint $table) {
+        Schema::create('multimedis', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre_dibujo');
-          $table->string('url');
-            
+            $table->string('url');
             $table->unsignedBigInteger('actividad_id')->unique();
-            //cramos la relacion a nivel de migraciones
-            $table->foreign('actividad_id')
-            ->references('id')
-            ->on('actividads')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
+            $table->foreign('actividad_id') ->references('id') ->on('actividads')->onDelete('cascade') ->onUpdate('cascade');
         });
     }
 
@@ -31,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('dibujos');
+        Schema::dropIfExists('multimedis');
     }
 };

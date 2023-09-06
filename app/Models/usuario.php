@@ -12,7 +12,7 @@ class usuario extends Model
         return $this->belongsToMany(Seccion::class, 'usuario_seccion');
     }
     
-    public function image(){
-        return $this->morphOne('App\Models\Image','imageable');
-    }
+   public function actividads(){
+    return $this->hasMany('App\Models\actividad');
+   }
 }

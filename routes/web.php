@@ -21,8 +21,8 @@ use Illuminate\Support\Facades\Route;
 
 
  
-Route::get('cursos', [CursoController::class, 'index'])->name('cursos.index');
-Route::post('cursos', [CursoController::class, 'store'])->name('cursos.store');
-Route::get('cursos/create', [CursoController::class, 'create']);
-Route::delete('curso/{curso}', [CursoController::class, 'destroy'])->name('curso.destroy');
-Route::get('cursos/{curso}', [CursoController::class, 'show'])->name('curso.show');
+Route::get('logins', [LoginController::class, 'index'])->name('logins.index');
+Route::post('logins', [LoginController::class, 'store'])->name('logins.store');
+Route::get('logins/create', [LoginController::class, 'create']);
+Route::delete('login/{login}', [LoginController::class, 'destroy'])->name('login.destroy');
+Route::get('logins/{login}', [LoginController::class, 'show'])->name('login.show');

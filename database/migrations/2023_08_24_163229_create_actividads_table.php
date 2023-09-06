@@ -14,14 +14,11 @@ return new class extends Migration
         Schema::create('actividads', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_actividad');
-
-            $table->unsignedBigInteger('tema_id')->unique();
-            //cramos la relacion a nivel de migraciones
-            $table->foreign('tema_id')
-            ->references('id')
-            ->on('temas')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
+            $table->unsignedBigInteger('usuario_id')->nullable();
+            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->unsignedBigInteger('tema_id')->nullable();
+            $table->foreign('tema_id')->references('id')->on('temas');
+            
         });
     }
 

@@ -11,11 +11,15 @@ class actividad extends Model
     public function tema(){
         return $this->belongsTo('App\Models\tema');
     }
-    public function dibujos(){
-        return $this->hasMany('App\Models\dibujo');
+    public function usuario(){
+        return $this->belongsTo('App\Models\usuario');
     }
-    public function images(){
-        return $this->hasMany('App\Models\image', 'imagetable');
+    public function tipo(){
+        return $this->belongsTo('App\Models\tipo');
     }
+public function multimedis(){
+    return $this->hasMany('App\Models\multimedi');
+}
+   
    
 }

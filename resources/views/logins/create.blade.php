@@ -2,8 +2,8 @@
 
 @section('content')
 
-<h1>Crear curso</h1>
-<form action="{{route('cursos.store')}}" method="POST" enctype="multipart/form-data">
+<h1>Crea login</h1>
+<form action="{{route('logins.store')}}" method="POST" enctype="multipart/form-data">
 
     @csrf
     <label>
@@ -25,12 +25,3 @@
     
     <br><br>
     <button type="submit">Enviar Formulario:</button>
-
-
-
-
-
-</form>
-
-@endsection
-
