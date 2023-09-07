@@ -17,10 +17,10 @@ class UsuarioFactory extends Factory
     public function definition() 
     {
         return [
-             'nombre_usuario' => $this->faker->sentence(),
-             'correo' => $this->faker->unique()->safeEmail(),
-             'contraseña'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-             'rol'=>$this->faker->sentence(),
+             'nombre_usuario' => $this->faker->sentence(2),
+             'correo' => $this->faker->sentence(2),
+             'contraseña'=>$this->faker->sentence(2),
+             'rol'=>$this->faker->sentence(2),
              
         ];
     }

@@ -14,8 +14,7 @@ return new class extends Migration
         Schema::create('seccions', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_seccion');
-         
-            
+            $table->timestamps();
         });
     }
 

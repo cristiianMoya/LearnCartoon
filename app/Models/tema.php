@@ -12,6 +12,6 @@ class tema extends Model
         return $this->belongsTo('App\Models\seccion');
     }
     public function actividads(){
-        return $this->hasMany('App\Models\actividad');
+        return $this->belongsTo('App\Models\actividad');
     }
 }

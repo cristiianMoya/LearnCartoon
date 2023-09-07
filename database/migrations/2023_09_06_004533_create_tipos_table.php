@@ -17,8 +17,10 @@ return new class extends Migration
             $table->string('juegos');
             $table->string('audios');
             $table->string('cuestionario');
-            $table->unsignedBigInteger('actividad_id')->nullable();
-            $table->foreign('actividad_id')->references('id')->on('actividads');
+
+            $table->unsignedBigInteger('actividad_id')->unique();
+            $table->foreign('actividad_id') ->references('id') ->on('actividads')->onDelete('cascade') ->onUpdate('cascade');
+
            
         });
     }
