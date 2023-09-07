@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 use App\Models\seccion;
+use App\Models\usuario;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 
@@ -18,7 +19,7 @@ class SeccionFactory extends Factory
     public function definition(): array
     {
         return [
-           'nombre_seccion' => $this->faker->sentence(),
+           'nombre_seccion' => $this->faker->sentence(2)
         ];
     }
 }

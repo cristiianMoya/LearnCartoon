@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('temas', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_tema');
-            $table->unsignedBigInteger('seccion_id')->unique();
-            //cramos la relacion a nivel de migraciones
+
+            $table->unsignedBigInteger('seccion_id')->nullable();
             $table->foreign('seccion_id') ->references('id') ->on('seccions')->onDelete('cascade')->onUpdate('cascade');
-           
+            
+            $table->timestamps();
            
             
             

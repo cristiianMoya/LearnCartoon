@@ -19,6 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('tema_id')->nullable();
             $table->foreign('tema_id')->references('id')->on('temas');
             
+            $table->timestamps();
         });
     }
 

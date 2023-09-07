@@ -8,18 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class actividad extends Model
 {
     use HasFactory;
+
     public function tema(){
         return $this->belongsTo('App\Models\tema');
     }
+
     public function usuario(){
         return $this->belongsTo('App\Models\usuario');
     }
+
     public function tipo(){
-        return $this->belongsTo('App\Models\tipo');
+        return $this->hasMany('App\Models\tipo');
     }
-public function multimedis(){
-    return $this->hasMany('App\Models\multimedi');
-}
-   
-   
+
+    public function multimedia(){
+        return $this->hasMany('App\Models\multimedia');
+    }
+
 }
