@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>Crea login</h1>
+<h1>Crear Login</h1>
 <form action="{{route('logins.store')}}" method="POST" enctype="multipart/form-data">
 
     @csrf

@@ -3,6 +3,7 @@
 use App\Http\Controllers\OperacionesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,8 @@ Route::post('logins', [LoginController::class, 'store'])->name('logins.store');
 Route::get('logins/create', [LoginController::class, 'create']);
 Route::delete('login/{login}', [LoginController::class, 'destroy'])->name('login.destroy');
 Route::get('logins/{login}', [LoginController::class, 'show'])->name('login.show');
+
+Route::get('usuarios', [UsuarioController::class, 'index'])->name('usuario.index');
+Route::post('usuarios', [UsuarioController::class, 'store'])->name('usuarios.store');
+Route::get('usuarios/create', [UsuarioController::class, 'create']);
+Route::get('usuarios/{usuario}', [UsuarioController::class, 'show'])->name('usuarios.show');

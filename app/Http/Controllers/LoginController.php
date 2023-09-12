@@ -23,7 +23,7 @@ class LoginController extends Controller
     public function store(Request $request){
         
         $login=new Login();
-         $login->name=$request->name;
+        $login->name=$request->name;
         $login->descripcion=$request->descripcion;
         //ADJUNTAR EL PDF
         $file=$request->file("urlPdf");
