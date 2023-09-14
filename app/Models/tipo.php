@@ -9,7 +9,7 @@ class tipo extends Model
 {
     use HasFactory;
 
-    public function actividad(){
+    public function actividads(){
         return $this->hasMany('App\Models\actividad');
        }
 

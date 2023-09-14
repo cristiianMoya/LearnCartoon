@@ -17,11 +17,11 @@ class actividad extends Model
         return $this->belongsTo('App\Models\usuario');
     }
 
-    public function tipos(){
+    public function tipo(){
         return $this->belongsTo('App\Models\tipo');
     }
 
-    public function multimedias(){
+    public function multimedia(){
         return $this->belongsTo('App\Models\multimedia');
     }
 
