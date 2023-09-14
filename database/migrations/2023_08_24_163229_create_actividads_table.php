@@ -14,10 +14,19 @@ return new class extends Migration
         Schema::create('actividads', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_actividad');
+
             $table->unsignedBigInteger('usuario_id')->nullable();
             $table->foreign('usuario_id')->references('id')->on('usuarios');
+
             $table->unsignedBigInteger('tema_id')->nullable();
             $table->foreign('tema_id')->references('id')->on('temas');
+
+            $table->unsignedBigInteger('tipo_id')->nullable();
+            $table->foreign('tipo_id')->references('id')->on('tipos');
+
+             $table->unsignedBigInteger('multimedia_id')->nullable();
+             $table->foreign('multimedia_id')->references('id')->on('multimedia');
+
             
             $table->timestamps();
         });

@@ -10,6 +10,7 @@ class tipo extends Model
     use HasFactory;
 
     public function actividad(){
-        return $this->belongsTo('App\Models\actividad');
-    }
+        return $this->hasMany('App\Models\actividad');
+       }
+
 }
