@@ -24,7 +24,9 @@ class UsuarioController extends Controller
         $usuario->rol = $request->rol;
 
         $usuario->save();
-        return view('usuarios.show', compact('usuario'));
+        // return view('usuarios.show', compact('usuario'));
+        return redirect()->route('usuario.index');
+
     }
 
     // public function show(){

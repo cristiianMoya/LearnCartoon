@@ -1,0 +1,307 @@
+/*https://byjus.com/co/futureschool/?utm_source=Google_CO
+_Search&utm_term=627009248108_programas+educativos+para+ni%C3%B1os
+_b&utm_medium=cpc&utm_campaign=CO_BFS_ACQ_BYJUs_Search_Coding_Lessons&utm
+_content=Clasesninos*/
+
+/* @import url(Menu\ Navegation.css); */
+@import url(PagSecciones.css);
+@import url(PagNumeros1.css);
+@import url(PagLyP.css);
+@import url(PagBocetos.css);
+@import url(PagDibujo.css);
+@import url(SobreNos.css);
+@import url(Mision.css);
+@import url(Contactenos.css);
+@import url(Registro.css);
+@import url(Iniciar\ Sesion.css);
+@import url(Usuario\ LC.css);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  display: block;
+  border: 3px solid #7ed957;
+  border-radius: 20px;
+  padding-top: 54px;
+  padding-bottom: 24px;
+  margin: 0 10px 0 10px;
+  background-color: #38b6ff;
+}
+.header1 {
+  border: 2px solid #38b6ff;
+  border-radius: 20px;
+  margin: 8px 8px 0 8px;
+  background-color: #38b6ff;
+}
+.logo {
+  width: 170px;
+  height: 170px;
+  margin: -125px 350px 0 0;
+}
+
+h1.Titulo-Cabecera {
+  margin-left: 240px;
+  font-family: Comic Sans MS;
+  font-size: 55px;
+  text-transform: none;
+  background: linear-gradient(yellow, white);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: text 7s linear infinite;
+}
+@keyframes text {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(160deg);
+  }
+}
+h2.Subtitulo-Cabecera {
+  margin-left: 230px;
+  font-family: Comic Sans MS;
+  font-size: 19px;
+  background: linear-gradient(yellow, white);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: text 7s linear infinite;
+}
+@keyframes text {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(160deg);
+  }
+}
+
+.TituloPag {
+  text-align: center;
+  background: #38b6ff;
+  margin: 0 8px 0 8px;
+  border-radius: 20px;
+}
+.TituloPagBorder {
+  border: 3px solid #7ed957;
+  border-radius: 20px;
+  margin: 0 10px 0 10px;
+  font-family: Comic Sans MS;
+  font-size: 25px;
+  padding: 15px 0 15px 0;
+}
+#fecha-actual {
+  font-family: Comic Sans MS;
+  font-size: 18px;
+  color: yellow;
+}
+body {
+  background-image: url(Images/paisaje.jpg);
+  background-size: cover;
+}
+
+.InicioPP {
+  text-align: center;
+  padding: 20px;
+}
+.Carrusel {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* carrusel de imagenes */
+.w-100 {
+  width: 60%;
+  height: 300px;
+  border: 2px solid;
+  border-radius: 20px;
+  color: #6dc33b;
+}
+
+.Introduccion1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 50px 0;
+}
+.Introduccion1 img {
+  max-width: 100%;
+  width: 47%;
+  height: auto;
+  margin: 10px;
+  border-radius: 80px;
+}
+.Introduccion1 p {
+  text-align: justify;
+  margin: 30px;
+}
+.Introduccion2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 50px 0;
+}
+.Introduccion2 img {
+  max-width: 100%;
+  width: 40%;
+  height: auto;
+  margin: 10px;
+  border-radius: 200px 110px 180px 150px;
+}
+.Introduccion2 p {
+  text-align: justify;
+  margin: 30px;
+}
+
+.ContenidoAdicional {
+  padding: 10px 0 120px 0;
+}
+
+.banner {
+  margin: 45px;
+  text-align: center;
+}
+.banner h2 {
+  width: 50%;
+  text-align: center;
+  background-color: #7ed957;
+  margin: 30px auto;
+  padding: 5px;
+  border-radius: 10px;
+}
+.banner p {
+  margin: 25px;
+}
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.feature {
+  margin: 10px;
+  text-align: center;
+  background-color: #055584;
+  flex-basis: 30%;
+  flex-grow: 1;
+}
+.feature img {
+  max-width: 100%;
+  width: 88%;
+  height: auto;
+  margin: 5px;
+  transition: transform 0.3s ease;
+}
+.feature img:hover {
+  transform: scale(0.9);
+}
+.feature2 {
+  margin: 10px;
+  text-align: center;
+  background-color: #055584;
+  flex-basis: 30%;
+  flex-grow: 1;
+}
+.feature2 img {
+  max-width: 100%;
+  width: 60%;
+  height: auto;
+  margin: 5px;
+  transition: transform 0.3s ease;
+}
+.feature2 img:hover {
+  transform: scale(0.9);
+}
+.feature2 h3 {
+  font-size: 22px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.feature2 p {
+  font-size: 16px;
+  color: #fff;
+}
+
+.feature h3 {
+  font-size: 22px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.feature p {
+  font-size: 16px;
+  color: #fff;
+}
+
+
+/*--------------------- Footer -------------------- */
+.SVG {
+    margin-top: -100px;
+  }
+  .Contacto {
+    display: flex;
+    text-align: center;
+    max-width: 100%;
+    background-color: #242528;
+    height: 110px;
+    font-family: Comic Sans MS;
+    color: #fff;
+  }
+  .Contacto h2 {
+    background: linear-gradient(yellow, white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: text 7s linear infinite;
+  }
+  @keyframes text {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(160deg);
+    }
+  }
+  .Redes {
+    width: 100%;
+  }
+  .Redes a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .Redes i {
+    font-size: 30px;
+    margin: 0 15px;
+  }
+  .Redes i:hover {
+    cursor: pointer;
+  }
+  .Correo {
+    width: 100%;
+  }
+  .Telefono {
+    width: 100%;
+  }
+  .Derechos {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    font-family: Arial;
+    font-size: 10px;
+    padding: 20px;
+  }

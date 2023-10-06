@@ -1,0 +1,101 @@
+.TituloRegistro{
+    width: 100%;
+    display: flex;
+    font-family: Comic Sans MS;
+    font-size: 22px;
+    border-bottom: 4px solid #8dff5c;
+    padding: 10px;
+}
+.IconoUsuario{
+    display: flex;
+    align-items: center;
+    margin-left: -80px;
+}
+.IconoUsuario img{
+    width: 25%;
+    margin-right: 15px;
+}
+.Rama{
+    width: 50%;
+    padding: 2px;
+    margin-right: -80px;
+}
+.FormularioR{
+    margin: 0 auto;
+    width: 100%;
+    font-family: Comic Sans MS;
+    font-size: 18px;
+}
+.FormularioR form{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    background-color: #38B6FF;
+    font-family: Comic Sans MS;
+    font-size: 20px;
+    margin: 50px auto;
+    padding: 20px 100px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 4px #38B6FF;
+    border: 3px solid #8dff5c;
+}
+.FormularioR label{
+    margin: 10px 0 10px 0;
+}
+.FormularioR input::placeholder{
+    color: rgb(68, 68, 68);
+}
+.Casillas{
+    padding: 15px;
+    font-family: Comic Sans MS;
+    font-size: 15px;
+    border-radius: 30px;
+    background-color: #8dff5c;
+}
+.Casillas:focus {
+    outline: none;
+    border: 2px solid white;
+  }
+.Contraseña{
+    display: flex;
+}
+.Contraseña .Casillas{
+    width: 100%;
+}
+.Contraseña button{
+    background: none;
+    border: none;
+    padding: 0;
+}
+.Contraseña img{
+    width: 30px;
+    height: auto;
+    margin: 0 0 0 10px;
+}
+.EnviarR{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 0 auto;
+    width: 60%;
+    padding: 15px 50px;
+    border-radius: 50px;
+    font-family: Comic Sans MS;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #64dc31;
+    transition: background-color 0.4s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.EnviarR:hover{
+    transform: translateY(6px);
+    box-shadow: 0px -8px 0px #2492d2;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
+.Pasto{
+    margin-top: 8px;
+    width: 600px;
+    position: relative;
+    top: 50%;
+    left: -15%;
+}

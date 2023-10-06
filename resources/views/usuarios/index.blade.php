@@ -1,74 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
+@extends('layouts.MenuNav')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Learn Cartoon - WEB </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-
-    @vite(['resources/css/app.css'])
-    <link rel="icon" href="Images/Logo LC Final-modified.png">
-    <script src="https://kit.fontawesome.com/5191364857.js" crossorigin="anonymous"></script>
-</head>
-
-<body class="index-page">
-
-    <div class="#">
-
-        <header class="header1">
-            <header class="header">
-                <h1 class="Titulo-Cabecera"> Learn Cartoon </h1>
-                <h2 class="Subtitulo-Cabecera"> Pasos de hoy, caminos del mañana </h2>
-                <img src="Images/Logo.png" class="logo">
-            </header>
-        </header>
-
-        <nav class="navegacion1">
-            <nav class="navegacion">
-                <ul class="menu-horizontal">
-                    <li><a href="Index.html"> INICIO </a></li>
-
-                    <li><a href="Registro.html"> REGISTRARSE </a>
-                        <ul class="menu-vertical">
-                            <li><a href="Iniciar Sesion.html">Iniciar Sesion</a></li>
-                            <li><a href="Recuperar Contraseña.html">Recuperar Contraseña</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="Usuario LC.html"> USUARIO LC </a></li>
-
-                    <li><a href="PagSecciones.html"> SECCIONES </a>
-                        <ul class="menu-vertical">
-                            <li><a href="PagNumeros.html">Numeros</a></li>
-                            <li><a href="PagLyP.html">Letras y palabras</a></li>
-                            <li><a href="PagBocetos.html">Bocetos</a></li>
-                            <li><a href="PagDibujo.html">Dibujo</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="SobreNos.html"> QUIENES SOMOS</a>
-                        <ul class="menu-vertical">
-                            <li><a href="Mision.html">Misión y Visión</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="Contactenos.html"> CONTACTENOS </a></a></li>
-                    <li><a href="#"> MENU </a></a>
-                        <ul class="menu-vertical">
-                             <li ><a href="Usuario LC.html">Perfil</a></li>
-                              <li ><a href="Ayuda.html">Ayuda</a></li>
-                              <li ><a href="Cambiar contraseña.html">Cambiar contraseña</a></li>
-                              <li ><a href="Cerrar sesion.html">Cerrar Sesion</a></li>
-                        </ul>
-                    
-                    </li>
-                </ul>
-            </nav>
-        </nav>
+@section('title', 'Learn Cartoon - Web')
+@section('content')
 
         <section class="contenido">
             <div class="InfoSecciones">
@@ -158,41 +91,7 @@
             </div>
         </section>
 
-        <footer class="Footer">
-        <div class="SVG" style="height: 150px; overflow: hidden;">
-            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-                <path d="M0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L0.00,150.33 Z"
-                    style="stroke: none; fill: #242528;"></path>
-            </svg>
-        </div>
-        <div class="Contacto">
-             <div class="Redes">
-            <h2> Nuestras Redes </h2>
-            <a href="https://es-la.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://twitter.com/?lang=es"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-        <div class="Correo">
-            <h2> Contacto: </h2>
-            <p> learncartoon@gmail.com </p>
-        </div>
-        <div class="Telefono">
-            <h2> Telefono: </h2>
-            <p> 01 8000 123 456 </p>
-        </div>
-        </div>
-        <div class="Nosotros">
-        </div>
-        <div class="Derechos">
-            <p> &reg; 2023 LEARN CARTOON, COLOMBIA, TODOS LOS DERECHOS RESERVADOS </p>
-        </div>
-    </footer>
-    </div>
-
-</body>
-
-</html>
-
+@endsection
 
 
 
