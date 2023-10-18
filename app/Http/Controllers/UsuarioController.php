@@ -9,7 +9,9 @@ class UsuarioController extends Controller
 {
     
     public function index(){
-        return view('usuarios.index');
+        $usuarios =  usuario::orderBy('id', 'desc')->get();
+       
+        return view('usuarios.listarusuario', compact('usuarios'));
     }
 
     public function create(){
@@ -22,10 +24,26 @@ class UsuarioController extends Controller
         $usuario->correo = $request->correo;
         $usuario->contraseña = $request->contraseña;
         $usuario->rol = $request->rol;
-
+        // $file=$request->file("urlPdf");
+        // $nombreArchivo = "pdf_".time().".".$file->guessExtension();
+        // $request->file('urlPdf')->storeAs('public/imagenes', $nombreArchivo );
+        // $usuario->urlPdf = $nombreArchivo;
         $usuario->save();
-        return view('usuarios.show', compact('usuario'));
+        
+        return redirect()->route('usuarios.index');
+        // return view('usuarios.show', compact('usuario'));
     }
+    public function show(usuario $usuario){
+        //$temp=Curso::find($curso);
+       return view('usuarios.show',compact('usuario'));
+     }
+
+     public function destroy (usuario $usuario){
+      $usuario->delete();
+      return redirect()->route('usuarios.index');
+       
+     }
+
 
     // public function show(){
     //     return view('usuarios.show');

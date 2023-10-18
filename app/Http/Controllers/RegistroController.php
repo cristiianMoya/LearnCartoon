@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\login;
 
-class LoginController extends Controller
+class RegistroController extends Controller
 {
     public function create(){
-        return view('auth.login');
+        return view('auth.registro');
     }
 }

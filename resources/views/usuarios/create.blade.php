@@ -1,39 +1,44 @@
-@extends('layouts.plantilla')
+@extends('layouts.app')
 
 @section('content')
+<div class="block mx-auto my-12 p-8 bg-white w-1/3 border border-gray-200 rounded-lg shadow-lg">
 
-<h1>Registrarse</h1>
-<form action="{{route('usuarios.store')}}" method="POST" enctype="multipart/form-data">
+<h1 class="text-3xl text-center font-bold">Crear usuario</h1>
+<form action="{{route('usuarios.store')}}" method="POST" enctype="multipart/form-data" class="mt-4">
 
     @csrf
     <label>
         Nombre:
         <br>
-        <input type="text" name="nombre_usuario">
+        <input type="text" name="nombre_usuario" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
     </label>
     <br>
     <label>
         Correo:
         <br>
-        <input type="text" name="correo">
+        <input type="email" name="correo" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
     </label>
-    <br>
     <label>
         Contraseña:
         <br>
-        <input type="text" name="contraseña">
+        <input type="passwork" name="contraseña" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
     </label>
-    <br>
     <label>
         Rol:
         <br>
-        <input type="text" name="rol">
+        <input type="text" name="rol" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
     </label>
-    {{-- <br><br>
-    <label >Adjuntar archivo PDF</label>
     <br><br>
-    <input type="file" name="urlPdf" class="form-control-file" accept="pdf/*"> --}}
+
     
     
     <br><br>
-    <button type="submit">Enviar Formulario:</button>
+    <button type="submit" class="font-semibold hover:bg-indigo-700 py-3 px-4 rounded-md border-2 hover:bg-white">Enviar Formulario:</button>
+
+
+
+
+
+</form>
+
+@endsection

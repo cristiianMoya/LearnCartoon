@@ -25,7 +25,7 @@ return new class extends Migration
             $table->foreign('tipo_id')->references('id')->on('tipos');
 
              $table->unsignedBigInteger('multimedia_id')->nullable();
-             $table->foreign('multimedia_id')->references('id')->on('multimedia');
+             $table->foreign('multimedia_id')->references('id')->on('multimedias');
 
             
             $table->timestamps();
