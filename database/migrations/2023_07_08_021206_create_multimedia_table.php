@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('juegos', function (Blueprint $table) {
+        Schema::create('multimedia', function (Blueprint $table) {
             $table->id();
+            $table->string('url');
             $table->timestamps();
         });
     }
@@ -22,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('juegos');
+        Schema::dropIfExists('multimedia');
     }
 };

@@ -2,7 +2,8 @@
 
 @section('content')
 
-<h1>Hola desde show</h1>
+<h1>Hola desde show</h1><br><br>
+<h2> Multimedia Creada 👌 </h2>
 
 {{$multimedia}}
 

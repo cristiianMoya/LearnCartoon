@@ -49,7 +49,7 @@ Route::post('tipos', [TipoController::class, 'store'])->name('tipos.store');
 Route::get('tipos/create', [TipoController::class, 'create']);
 Route::delete('tipo/{tipo}', [TipoController::class, 'destroy'])->name('tipo.destroy');
 Route::get('tipos/{tipo}', [TipoController::class, 'show'])->name('tipo.show');
-// --------------------
+
 Route::get('multimedias', [MultimediaController::class, 'index'])->name('multimedias.index');
 Route::post('multimedias', [MultimediaController::class, 'store'])->name('multimedias.store');
 Route::get('multimedias/create', [MultimediaController::class, 'create']);

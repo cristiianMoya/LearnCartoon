@@ -13,5 +13,4 @@ class multimedia extends Model
         return $this->hasMany('App\Models\actividad');
     }
 
-
 }
