@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('seccions', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_seccion');
+             
+            $table->unsignedBigInteger('usuario_id')->nullable();
+            $table->foreign('usuario_id') ->references('id') ->on('usuarios')->onDelete('cascade')->onUpdate('cascade');
+
             $table->timestamps();
         });
     }

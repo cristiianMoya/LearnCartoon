@@ -10,8 +10,7 @@ class seccion extends Model
     use HasFactory;
     // relacion de uno a muchos
     public function usuarios (){
-        return $this->belongsToMany(Usuario::class, 'usuario_seccion');
-
+        return $this->belongsTo('App\Models\seccion');
     }
    
     public function temas(){
