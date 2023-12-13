@@ -2,7 +2,7 @@
 
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SesionController;
 use App\Http\Controllers\RegistroController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\SeccionController;
@@ -16,7 +16,10 @@ Route::get('/', function(){
     return view('home');
 });
 Route::get('/registro',[RegistroController::class, 'create'])->name('registro.index');
-Route::get('/login',[LoginController::class, 'create'])->name('login.index');
+Route::post('/registro', [RegistroController::class, 'store'])->name('registro.store');
+
+
+Route::get('/sesion',[SesionController::class, 'create'])->name('sesion.index');
 
 
 

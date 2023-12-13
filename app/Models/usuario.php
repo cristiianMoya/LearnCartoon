@@ -16,4 +16,6 @@ class usuario extends Model
    public function actividads(){
     return $this->hasMany('App\Models\actividad');
    }
+   protected $fillable = ['nombre_usuario'];
+
 }
