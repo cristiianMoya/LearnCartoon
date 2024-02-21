@@ -17,18 +17,18 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet"> 
 </head>
 <body class="bg-gray-100 text-gray-800">
-  <nav class="flex py-5 bg-sky-500 text-white">
+  {{-- <nav class="flex py-5 bg-sky-500 text-white">
     <div class="w-1/2 px-12 mr-auto">
       <p class="text-2xl font-bold">Learn Cartoon</p>
     </div>
     <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
     <li class="mx-6">
-      <a href="{{route('registro.index')}}" class="font-semibold hover:bg-indigo-700 py-3 px-4 rounded-md border-2 hover:bg-white">Registro</a>
+      {<a href="{{route('registro.index')}}" class="font-semibold hover:bg-indigo-700 py-3 px-4 rounded-md border-2 hover:bg-white">Registro</a>
       <a href="{{route('login.index')}}" class="font-semibold hover:bg-indigo-700 py-3 px-4 rounded-md border-2
       border-white py-2 px-4 rounded-md hover:bg-white">Login</a>
     </li>
     </ul>
-  </nav>
+  </nav> --}}
   
 
 

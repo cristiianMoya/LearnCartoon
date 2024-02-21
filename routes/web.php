@@ -15,10 +15,8 @@ use App\Http\Controllers\MultimediaController;
 Route::get('/', function(){
     return view('home');
 });
-Route::get('/registro',[RegistroController::class, 'create'])->name('registro.index');
-Route::get('/login',[LoginController::class, 'create'])->name('login.index');
-
-
+// Route::get('/registro',[RegistroController::class, 'create'])->name('registro.index');
+// Route::get('/login',[LoginController::class, 'create'])->name('login.index');
 
 Route::get('usuarios', [UsuarioController::class, 'index'])->name('usuarios.index');
 Route::post('usuarios', [UsuarioController::class, 'store'])->name('usuarios.store');

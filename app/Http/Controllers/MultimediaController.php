@@ -3,13 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\multimedia;
+use Illuminate\Contracts\Cache\Store;
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Storage;
 
 class MultimediaController extends Controller
 {
     public function index(){
-        $multimedias = multimedia::orderBy('id', 'desc')->get();
-        return view('multimedias.listarmultimedia', compact('multimedias'));
+        // $multimedias = multimedia::orderBy('id', 'desc')->get();
+        // return view('multimedias.listarmultimedia', compact('multimedias'));
+        $multimedias = multimedia::all();
+        return view('multimedias.home', compact('multimedias'));
+        // $multimedias = multimedia::all();
+        // return view('multimedias.home', compact('multimedias'));
     }
 
     public function create(){
@@ -17,9 +24,18 @@ class MultimediaController extends Controller
     }
 
     public function store(Request $request){
-        $multimedia = new multimedia();
-        $multimedia->url = $request->url;
-        $multimedia->save();
+        // $multimedia = new multimedia();
+        // $multimedia->url = $request->url;
+        // $multimedia->save();
+        $request->validate([
+            'file' => 'required|image'
+        ]);
+        $imagenes = $request->file('file')->store('public/imagenes');
+        $url = Storage::url($imagenes);
+        multimedia::create([
+            'url' => $url     
+        ]);
+        return redirect()->route('multimedias.index');
     }
 
     public function show(multimedia $multimedia){
@@ -28,6 +44,6 @@ class MultimediaController extends Controller
 
     public function destroy(multimedia $multimedia){
         $multimedia->delete();
-        return redirect()->route('multimedia.index');
+        return redirect()->route('multimedias.index');
     }
 }

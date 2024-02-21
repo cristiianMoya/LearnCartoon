@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\seccion;
+use App\Models\multimedia;
 
 class SeccionController extends Controller
 {
@@ -11,9 +12,8 @@ class SeccionController extends Controller
     
         
         public function index(){
-            $seccions =  seccion::orderBy('id', 'desc')->get();
-           
-            return view('seccions.listarseccion', compact('seccions'));
+            $multimedia = multimedia::all();
+            return view('seccions.home', compact('multimedia'));
         }
     
         public function create(){
@@ -34,8 +34,9 @@ class SeccionController extends Controller
             // return view('usuarios.show', compact('usuario'));
         }
         public function show(seccion $seccion){
-            //$temp=Curso::find($curso);
-           return view('seccions.show',compact('seccion'));
+            $seccions =  seccion::orderBy('id', 'desc')->get();
+           
+            return view('seccions.listarseccion', compact('seccions'));
          }
     
          public function destroy (seccion $seccion){

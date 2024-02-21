@@ -29,11 +29,8 @@
                         <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                     </form>
                  </td>
-             
-                 
                  
                   {{-- <td><a href="{{route('curso.destroy',$curso->id)}}">Eliminar</a></td> --}}
-                  
     
               </tr>
           @endforeach
@@ -53,17 +50,6 @@
     
     </div>
     
-
-
-
-
-
-
-
-
-
-
-
 @endsection
 
 @section('js')
