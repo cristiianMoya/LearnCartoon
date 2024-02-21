@@ -1,0 +1,125 @@
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #36b3ff;
+    color: white;
+    text-align: center;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: 6% 12% auto auto;
+    align-items: center;
+    justify-content: center;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  }
+  
+  /* Estilos para el logotipo */
+  .imagen1 {
+    height: 70px;
+    width: 70px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+  }
+  
+  li.logins {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+  }
+  a.logins {
+    text-decoration: none;
+    color: white;
+    background-color: #01a9db;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    padding: 14px 26px;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid;
+    width:auto;
+    display: flex;
+    justify-content: center;
+  }
+  a.logins:hover {
+    opacity: 0.6;
+  }
+  a.menu {
+    text-decoration: none;
+    color: transparent;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    padding: 6px;
+    letter-spacing: 1px;
+    border: none;
+  }
+  a.menu:hover {
+    opacity: 0.6;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+
+
+nav.navegacion {
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    
+
+   }
+   
+   .navegacion ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     
+   }
+   
+   .navegacion ul li {
+     margin-right: 20px;
+     list-style-type: none;
+    
+   }
+   
+   .navegacion ul li a {
+     display: block;
+    
+     text-decoration: none;
+     color:white;
+    
+    
+    
+   }
+   
+   .navegacion ul li:hover > ul {
+     display: block;
+     
+   }
+   
+   .navegacion ul ul {
+     display: none;
+     position: absolute;
+   }
+   .submenu{
+    background-color:#01A9DB;
+   border-radius: 12px;
+   border: 2px;
+   text-align: left;
+   width: 150px;
+
+   }
+   .submenu li{
+    margin: 15px 0;
+   }

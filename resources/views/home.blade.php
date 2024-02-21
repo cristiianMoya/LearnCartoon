@@ -1,5 +1,6 @@
 @extends('layouts.hmf')
 
+<<<<<<< HEAD
 @section('title', 'Learn Cartoon')
 
 @section('content')

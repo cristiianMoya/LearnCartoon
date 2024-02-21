@@ -29,8 +29,6 @@
     </li>
     </ul>
   </nav> --}}
-  
-
 
   @yield('content')
     
@@ -48,4 +46,7 @@
     
 </body>
 
+</html>
+
+  </body>
 </html>
