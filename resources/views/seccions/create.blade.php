@@ -11,20 +11,12 @@
         Nombre:
         <br>
         <input type="text" name="nombre_seccion" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
-    </label>
-   
-        
+    </label> 
         
     <br><br>
-
-    
     
     <br><br>
     <button type="submit" class="font-semibold hover:bg-indigo-700 py-3 px-4 rounded-md border-2 hover:bg-white">Enviar Formulario:</button>
-
-
-
-
 
 </form>
 

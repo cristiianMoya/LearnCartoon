@@ -4,7 +4,8 @@
 
 @section('content')
 <br>
-<h2> Welcome to multimedia </h2>
+<h2 class="px-2"> Bienvenido a la multimedia de Learn Cartoon</h2>
+<button class="p-2 m-2"><a href="{{route('multimedias.create')}}"> Crear nueva multimedia</a></button>
 {{-- <img src="{{ asset('/storage/imagenes/hVPDwLAVZWWn9WtDifKLRyBkrFMRDIjgkTc6wqQB.jpg') }}"> --}}
 <br>
 

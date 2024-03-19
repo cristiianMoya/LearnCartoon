@@ -1,11 +1,8 @@
 @extends('layouts.hmf')
 
-<<<<<<< HEAD
-@section('title', 'Learn Cartoon')
+@section('title', 'Learn Cartoon Home')
 
 @section('content')
-
-{{-- <h1 class="text-5xl text-center pt-40">Bienvenido a Learn Cartoon</h1> --}}
 
 <div class="InfoSecciones">
     <h2 class="InicioPP">¡Aprende y Diviértete!</h2>
@@ -17,21 +14,21 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-              src="Images/llegare a tiempo2.webp"
+              src="{{asset('/storage/imagenes/xaNY17IMmn98ICnGPo8wfDin7L5FyNa496uqu0xs.webp')}}"
               class="d-block w-100"
               alt="Banner 1"
             />
           </div>
           <div class="carousel-item">
             <img
-              src="Images/llegare a tiempo5.webp"
+              src="{{asset('/storage/imagenes/EPJYnjfdho2F8pMP1PDrQSJ7TcPUzNinZCmsNFOi.webp')}}"
               class="d-block w-100"
               alt="Banner 2"
             />
           </div>
           <div class="carousel-item">
             <img
-              src="Images/llegare a tiempo3.webp"
+              src="{{asset('/storage/imagenes/mxpeHvG4O2I6h93e7Oi4ALH5iMyW0Tx4f4elhqOG.webp')}}"
               class="d-block w-100"
               alt="Banner 3"
             />
@@ -66,12 +63,7 @@
 
     <!-- ----------------------------------------------- -->
     <section class="Introduccion1">
-      {{-- @if($multimedia)
-      <img src="{{ asset($multimedia->url) }}" alt="Imagen de Goku" />
-      @else
-      <p>No se encontro la Imagen</p>
-      @endif --}}
-      
+      <img src="{{asset('/storage/imagenes/uM2vElvy07ATh2U8sk4L4r4Aef6fuyyLnFvDIAFZ.gif')}}" alt="Imagen de Goku">      
       <p>
         Nos enfocamos en caracterisarnos por nuestro interes y compromiso al
         brindar nuestros servicios con secciones, cada una con niveles de
@@ -90,7 +82,7 @@
         habilidades y expandir su creatividad con los que evidencian con
         esta mundo tecnologico educativo desde cualquier lugar y momento.
       </p>
-      <img src="Images/Niños.gif" alt="Imagen Educativa" />
+      <img src="{{asset('/storage/imagenes/STTPtRNSw1Yk6EyOnNeHcKcctXnaQXNHrvL7dhps.gif')}}" alt="Imagen Educativa" />
       </section>
 
     <main class="ContenidoAdicional">
@@ -102,7 +94,7 @@
                 
                 <section class="features">
                   <div class="feature">
-                    <a href="PagDibujo.html"> <img src="Images/dibujo1.gif" alt="Juegos"></a>
+                    <a href="#"> <img src="{{asset('/storage/imagenes/vS33vsiAfjob1zTIVDnTyda9T1YXhg3OnrIk21vd.gif')}}" alt="Juegos"></a>
                     <h3> Colorea y pinta. 🎨</h3>
                     <p>Disfruta de usar tu imaginación. Todos los colores disponibles al uso 
                         que quieras.
@@ -110,7 +102,7 @@
                   </div>
                   
                   <div class="feature">
-                    <a href="PagBocetos.html"><img src="Images/Bocetos1.gif" alt="Actividades"></a>
+                    <a href="#"><img src="{{asset('/storage/imagenes/5sREn4qXds62ZdNeyjoEfILSjz0xCZZnt3ShHAJY.gif')}}" alt="Actividades"></a>
                     <h3>Escoje a tu preferencia.</h3>
                     <p> Si deseas una guia no te preocupes tienes la ayuda necesaria para empezar 
                         tus pinturas.
@@ -118,12 +110,18 @@
                   </div>
                   
                   <div class="feature2">
-                    <a href=""><img src="Images/llegare a tiempoo.gif" alt="Premios"></a>
+                    <a href="#"><img src="{{asset('/storage/imagenes/ntsEu5uzxJAUauaGySf6v2BGyiYgksn1SKBNXfYc.gif')}}" alt="Premios"></a>
                     <h3>Diviértete y aprende.</h3>
                     <p>Supera desafíos, recuerda que siempre hay seguir aprendiendo.</p>
                   </div>
                 </section>
     </main>
   </div>
+
+      <!-- Botón de "Volver arriba" -->
+      <div id="go-to-top" class="hidden">
+        <a href="#top">"¡A volar! 🐱‍🏍" </a>
+    </div>
+    <script src="{{ asset('assets/js/Volver Arriba.js')}}"></script>
 
 @endsection

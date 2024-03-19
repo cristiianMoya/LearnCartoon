@@ -8,7 +8,7 @@
   } */
 
   body {
-    background-image: url(Images/paisaje.webp);
+    background-image: url(../images/paisaje.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }

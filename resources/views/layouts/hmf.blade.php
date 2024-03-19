@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> @yield('title') - Web </title>
-
+    <link rel="icon" href="{{asset('	/storage/imagenes/FEyxJrLeygskXtG4SGIlO8t10KvSMZjNSjc9MVve.webp')}}"/>
     <link rel="stylesheet" href="{{ asset('assets/css/hmf.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/estilosIndex.css') }}">
-    <link rel="icon" href="{{ asset('assets/images/Logo.webp') }}"/>
     <script
       src="https://kit.fontawesome.com/5191364857.js"
       crossorigin="anonymous"
@@ -30,7 +29,7 @@
   <body>
 
     <header class="header">
-        <img src="{{ asset('assets/images/Logo.webp') }}" alt="Logo Learn Cartoon" class="logo" />
+        <img class="logo" src="{{asset('/storage/imagenes/FEyxJrLeygskXtG4SGIlO8t10KvSMZjNSjc9MVve.webp')}}" alt="Logo Learn Cartoon"/>
         <div class="TituloLema">
         <h1 class="Titulo-Cabecera">Learn Cartoon</h1>
         <h2 class="Subtitulo-Cabecera">Pasos de hoy, caminos del mañana</h2>
@@ -46,15 +45,14 @@
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+              {{-- <li class="nav-item">
                 <a class="nav-link" href="Index.html">INICIO</a>
-              </li>
+              </li> --}}
   
               <li class="nav-item dropdown">
                 <a
@@ -62,18 +60,16 @@
                   href="Registro.html"
                   role="button"
                   data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+                  aria-expanded="false">
                   REGISTRO
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="Registro.html">Registrarme</a>
+                    <a class="dropdown-item" href="{{route('usuarios.create')}}">Registrarme</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="Iniciar Sesion.html"
-                      >Iniciar Sesión</a
-                    >
+                    <a class="dropdown-item" href=""
+                      >Iniciar Sesión</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="">Recuperar Contraseña</a>
@@ -86,7 +82,7 @@
               </li>
   
               <li class="nav-item">
-                <a class="nav-link" href="Usuario LC.html">USUARIO LC</a>
+                <a class="nav-link" href="">USUARIO LC</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -100,24 +96,23 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="PagSecciones.html"
-                      >INTRODUCCIÓN</a
-                    >
+                    <a class="dropdown-item" href="{{route('seccions.home')}}"
+                      >INTRODUCCIÓN</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="PagNumeros.html">Números</a>
+                    <a class="dropdown-item" href="{{route('seccions.numeros')}}">Números</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="PagLyP.html"
+                    <a class="dropdown-item" href="{{route('seccions.lyp')}}"
                       >Letras y palabras</a
                     >
                   </li>
                   <!-- <li><hr class="dropdown-divider"></li> -->
                   <li>
-                    <a class="dropdown-item" href="PagBocetos.html">Bocetos</a>
+                    <a class="dropdown-item" href="{{route('seccions.bocetos')}}">Bocetos</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="PagDibujo.html">Dibujo</a>
+                    <a class="dropdown-item" href="{{route('seccions.dibujo')}}">Dibujo</a>
                   </li>
                 </ul>
               </li>
@@ -127,20 +122,17 @@
                   href="SobreNos.html"
                   role="button"
                   data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+                  aria-expanded="false">
                   SOBRE NOSOTROS
                 </a>
                 <ul class="dropdown-menu">
                   <li>
                     <a class="dropdown-item" href="SobreNos.html"
-                      >Quienes somos</a
-                    >
+                      >Quienes somos</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="Mision.html"
-                      >Misión y Visión</a
-                    >
+                      >Misión y Visión</a>
                   </li>
                 </ul>
               </li>
@@ -152,12 +144,7 @@
         </div>
       </nav>
 
-      
-
       @yield('content')
-
-
-
 
       <footer class="Footer">
         <div class="SVG" style="height: 150px; overflow: hidden">
@@ -199,7 +186,5 @@
         </div>
       </footer>
   
-
   </body>
-
 </html>

@@ -5,15 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\seccion;
 use App\Models\multimedia;
+use Illuminate\Support\Facades\Http;
 
 class SeccionController extends Controller
 {
    
-    
-        
         public function index(){
-            $multimedia = multimedia::all();
-            return view('seccions.home', compact('multimedia'));
+
+            $url = env('URL_SERVER_API', 'http://127.0.0.1');
+            $response = Http::get($url.'/users');
+            $data = $response->json();
+
+
+            // $usuarios = Http::get('https://jsonplaceholder.typicode.com/users');
+            // $usuariosArray = $usuarios->json();
+
+            // // $multimedia = multimedia::all();
+            return view('seccions.home', compact('data'));
         }
     
         public function create(){

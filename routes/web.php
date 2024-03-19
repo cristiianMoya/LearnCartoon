@@ -11,16 +11,15 @@ use App\Http\Controllers\TipoController;
 use App\Http\Controllers\ActividadController;
 use App\Http\Controllers\MultimediaController;
 
-
 Route::get('/', function(){
     return view('home');
-});
+})->name('home');
 // Route::get('/registro',[RegistroController::class, 'create'])->name('registro.index');
 // Route::get('/login',[LoginController::class, 'create'])->name('login.index');
 
 Route::get('usuarios', [UsuarioController::class, 'index'])->name('usuarios.index');
 Route::post('usuarios', [UsuarioController::class, 'store'])->name('usuarios.store');
-Route::get('usuarios/create', [UsuarioController::class, 'create']);
+Route::get('usuarios/create', [UsuarioController::class, 'create'])->name('usuarios.create');
 Route::delete('usuario/{usuario}', [UsuarioController::class, 'destroy'])->name('usuario.destroy');
 Route::get('usuarios/{usuario}', [UsuarioController::class, 'show'])->name('usuario.show');
 
@@ -50,6 +49,26 @@ Route::get('tipos/{tipo}', [TipoController::class, 'show'])->name('tipo.show');
 
 Route::get('multimedias', [MultimediaController::class, 'index'])->name('multimedias.index');
 Route::post('multimedias', [MultimediaController::class, 'store'])->name('multimedias.store');
-Route::get('multimedias/create', [MultimediaController::class, 'create']);
+Route::get('multimedias/create', [MultimediaController::class, 'create'])->name('multimedias.create');
 Route::delete('multimedia/{multimedia}', [MultimediaController::class, 'destroy'])->name('multimedia.destroy');
 Route::get('multimedias/{multimedia}', [MultimediaController::class, 'show'])->name('multimedia.show');
+
+Route::get('seccions1', function(){
+    return view('seccions.home');
+})->name('seccions.home');
+
+Route::get('seccions-Números', function(){
+    return view('seccions.numeros');
+})->name('seccions.numeros');
+
+Route::get('seccions-Letras y palabras', function(){
+    return view('seccions.letrasypalabras');
+})->name('seccions.lyp');
+
+Route::get('seccions-Bocetos', function(){
+    return view('seccions.bocetos');
+})->name('seccions.bocetos');
+
+Route::get('seccions-Dibujo', function(){
+    return view('seccions.dibujo');
+})->name('seccions.dibujo');
